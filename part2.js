@@ -21,7 +21,11 @@
 			if (status === 0 || (status >= 200 && status < 400)) {
 				// The request has been completed successfully
 				responseData = JSON.parse(this.responseText);
+
+				// Log parsed response data to console
 				console.log(responseData);
+
+				// Execute function to populate contacts
 				populateContacts(responseData)
 
 			} else {
